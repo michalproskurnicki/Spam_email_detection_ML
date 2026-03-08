@@ -61,7 +61,14 @@ print(prediction) # 1 = spam, 0 = ham
 - Confusion matrix
 - Most indicative words for spam and ham messages
 
-> *Tip: You can add images of these plots here for better visual impact.*
+> <img width="1920" height="1080" alt="Zrzut ekranu (7)" src="https://github.com/user-attachments/assets/cb7e278d-a625-4a15-9812-f3cffe7eefb3" />
+<img width="1920" height="1080" alt="Zrzut ekranu (8)" src="https://github.com/user-attachments/assets/4dd1b2c9-c2fd-46cb-bad9-70e2ec7dffbb" />
+<img width="1920" height="1080" alt="Zrzut ekranu (9)" src="https://github.com/user-attachments/assets/e808e5f8-1bc6-48bb-bb23-595597cadd19" />
+<img width="1920" height="1080" alt="Zrzut ekranu (10)" src="https://github.com/user-attachments/assets/c9641b85-8963-4201-9e48-e12f85d11745" />
+
+
+
+
 
 ---
 
