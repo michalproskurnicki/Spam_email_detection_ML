@@ -76,6 +76,7 @@ print(prediction) # 1 = spam, 0 = ham
 - [ ] Add message length as an additional feature to improve model accuracy
 - [ ] Try other machine learning models (Random Forest, Naive Bayes, etc.)
 - [ ] Create an interactive interface using Streamlit or similar
+- [ ] Model Accuracy 0.9497757847533632
 
 ---
 
