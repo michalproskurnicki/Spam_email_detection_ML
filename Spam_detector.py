@@ -45,9 +45,8 @@ plt.show()
 def clean_text(column):
     column = column.str.replace("[^\w\s]", "", regex=True)  # Remove punctuation
     column = column.str.replace("\s+", " ", regex=True)  # Replace multiple spaces with single space
-    column= column.str.strip()  # Remove leading and trailing whitespace
-   
-
+    column = column.str.strip()  # Remove leading and trailing whitespace
+    column = column.str.lower()  # convert to lowercase so all entries are uniform
     return column
 
 
