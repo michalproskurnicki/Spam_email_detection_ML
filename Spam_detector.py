@@ -17,10 +17,7 @@ spam = spam.drop(columns=["Unnamed: 2", "Unnamed: 3", "Unnamed: 4"])
 spam["v1"] = spam["v1"].replace({"ham": 0, "spam": 1})
 spam["v1"] = spam["v1"].astype(int)
 
-# Clean text
-spam["v2"] = spam["v2"].str.replace("[^\w\s]", "", regex=True).str.lower()
-spam["v2"] = spam["v2"].str.replace("\s+", " ", regex=True)
-spam["v2"] = spam["v2"].str.strip()
+
 
 # Quick overview
 print(spam.head())
@@ -44,9 +41,20 @@ plt.ylabel("Average Number of Characters")
 plt.title("Average Message Length by Type")
 plt.show()
 
+# cleaning text data function 
+def clean_text(column):
+    column = column.str.replace("[^\w\s]", "", regex=True)  # Remove punctuation
+    column = column.str.replace("\s+", " ", regex=True)  # Replace multiple spaces with single space
+    column= column.str.strip()  # Remove leading and trailing whitespace
+   
+
+    return column
+
+
 # Prepare data for model
-X = spam["v2"]
+X = clean_text(spam["v2"])
 y = spam["v1"]
+
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
@@ -75,7 +83,8 @@ plt.show()
 
 # Test model on new message
 new_text = "Congratulations! You've won a free ticket to the Bahamas. Click here to claim your prize."
-new_vec = vectorizer.transform([new_text])
+cleaned_text = clean_text(pd.Series(new_text))[0]
+new_vec = vectorizer.transform([cleaned_text])
 prediction = model.predict(new_vec)
 print("Prediction for new message:", prediction)  # 1 = spam, 0 = ham
 
