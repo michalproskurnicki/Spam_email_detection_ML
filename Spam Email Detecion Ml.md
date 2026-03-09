@@ -50,9 +50,11 @@ python spam_detector.py
 ## 💻 Example Usage
 
 ```python
-my_text = "Congratulations! You've won a free ticket to the Bahamas. Click here to claim your prize."
-prediction = model.predict(vectorizer.transform([my_text]))
-print(prediction) # 1 = spam, 0 = ham
+new_text = "Congratulations! You've won a free ticket to the Bahamas. Click here to claim your prize."
+cleaned_text = clean_text(pd.Series(new_text))[0]
+new_vec = vectorizer.transform([cleaned_text])
+prediction = model.predict(new_vec)
+print("Prediction for new message:", prediction)  # 1 = spam, 0 = ham
 ```
 
 ---
