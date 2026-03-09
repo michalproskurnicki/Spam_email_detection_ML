@@ -12,6 +12,7 @@ It uses Python, Pandas, scikit-learn, and TF-IDF for text processing, and Logist
 - SMS classification using Logistic Regression
 - Confusion matrix and classification report
 - Test the model on new, unseen messages
+- Model Accuracy 0.9497757847533632
 
 ---
 
@@ -61,10 +62,13 @@ print(prediction) # 1 = spam, 0 = ham
 - Confusion matrix
 - Most indicative words for spam and ham messages
 
-> <img width="1920" height="1080" alt="Zrzut ekranu (7)" src="https://github.com/user-attachments/assets/cb7e278d-a625-4a15-9812-f3cffe7eefb3" />
-<img width="1920" height="1080" alt="Zrzut ekranu (8)" src="https://github.com/user-attachments/assets/4dd1b2c9-c2fd-46cb-bad9-70e2ec7dffbb" />
-<img width="1920" height="1080" alt="Zrzut ekranu (9)" src="https://github.com/user-attachments/assets/e808e5f8-1bc6-48bb-bb23-595597cadd19" />
-<img width="1920" height="1080" alt="Zrzut ekranu (10)" src="https://github.com/user-attachments/assets/c9641b85-8963-4201-9e48-e12f85d11745" />
+> <img width="1643" height="924" alt="Zrzut ekranu (15)" src="https://github.com/user-attachments/assets/5b37d8d2-8f89-4ea7-9b74-6687250ce67c" />
+><img width="1641" height="923" alt="Zrzut ekranu (16)" src="https://github.com/user-attachments/assets/562d4b17-5059-42e2-b9bb-d984c0457098" />
+><img width="1653" height="930" alt="Zrzut ekranu (17)" src="https://github.com/user-attachments/assets/11414d61-0d61-4d02-bd4e-9925156bf60e" />
+><img width="1648" height="927" alt="Zrzut ekranu (18)" src="https://github.com/user-attachments/assets/8d314d26-1b57-4c00-91b7-400b7022aad2" />
+
+
+
 
 
 
@@ -76,7 +80,7 @@ print(prediction) # 1 = spam, 0 = ham
 - [ ] Add message length as an additional feature to improve model accuracy
 - [ ] Try other machine learning models (Random Forest, Naive Bayes, etc.)
 - [ ] Create an interactive interface using Streamlit or similar
-- [ ] Model Accuracy 0.9497757847533632
+      
 
 ---
 
