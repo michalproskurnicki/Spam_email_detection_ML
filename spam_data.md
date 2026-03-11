@@ -1,2 +1,2 @@
 Spam data download link:
-https://www.kaggle.com/datasets/jackksoncsie/spam-email-dataset
+https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset?resource=download
