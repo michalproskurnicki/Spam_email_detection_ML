@@ -1,91 +1,34 @@
-# 📧 Spam Email Detection ML
+# 📧 SMS Spam Detection (NLP)
 
-This project classifies Email messages as **spam** or **ham (not spam)**.  
-It uses Python, Pandas, scikit-learn, and TF-IDF for text processing, and Logistic Regression for prediction.
+Projekt klasyfikacji wiadomości tekstowych jako **SPAM** lub **HAM** (pożądane) przy użyciu przetwarzania języka naturalnego. Model bazuje na wektoryzacji **TF-IDF** oraz algorytmie **Logistic Regression** z równoważeniem klas, co zapewnia wysoką skuteczność na mocno niezbalansowanym zbiorze danych.
 
----
+## 📊 Wyniki Modelu (Zbiór testowy)
+Model został przetestowany z rygorystycznym zachowaniem braku wycieku danych (preprocessing i wektoryzacja aplikowane dopiero po podziale `train_test_split`).
 
-## ⚙️ Features
-- Load and clean SMS dataset (`spam.csv`)
-- Perform statistical analysis (number of messages, average text length)
-- Visualize data (average message length, most frequent words)
-- SMS classification using Logistic Regression
-- Confusion matrix and classification report
-- Test the model on new, unseen messages
-- Model Accuracy 0.9497757847533632
+* **ROC-AUC:** `0.9857` – niemal idealna zdolność modelu do rozdzielania klas.
+* **Accuracy:** `98.21%` – ogólna poprawność klasyfikacji.
+* **Precision (Spam):** `95.10%` – zminimalizowane ryzyko oznaczania ważnych wiadomości jako spam (False Positives).
+* **Recall (Spam):** `91.28%` – bardzo wysoka skuteczność wyłapywania faktycznego spamu.
+* **F1-Score (Spam):** `0.9315` – świetny balans między precyzją a czułością.
 
----
+### 📋 Raport Klasyfikacji
 
-## 🛠️ Technologies
-- **Python 3.14.3**
-- Pandas
-- Numpy
-- Matplotlib / Seaborn
-- scikit-learn (TF-IDF, Logistic Regression)
+                  precision    recall  f1-score   support
 
----
+             Ham       0.99      0.99      0.99       966
+            Spam       0.95      0.91      0.93       149
 
-## 🚀 Installation & Usage
+        accuracy                           0.98      1115
+       macro avg       0.97      0.95      0.96      1115
+    weighted avg       0.98      0.98      0.98      1115
 
-**1. Clone the repository:**
-```bash
-git clone [https://github.com/michalproskurnicki/Spam_email_detection_ML.git](https://github.com/michalproskurnicki/Spam_email_detection_ML.git)
-```
-
-**2. Install required packages:**
-```bash
-pip install -r requirements.txt
-```
-
-**3. Dataset:**
-Place `spam.csv` in the project folder or update the path in the code.
-
-**4. Run the project:**
-```bash
-python spam_detector.py
-```
-
----
-
-## 💻 Example Usage
-
-```python
-new_text = "Congratulations! You've won a free ticket to the Bahamas. Click here to claim your prize."
-cleaned_text = clean_text(pd.Series(new_text))[0]
-new_vec = vectorizer.transform([cleaned_text])
-prediction = model.predict(new_vec)
-print("Prediction for new message:", prediction)  # 1 = spam, 0 = ham
-```
-
----
-
-## 📊 Visualizations
-- Average message length by type (spam vs ham)
-- Confusion matrix
-- Most indicative words for spam and ham messages
-
-> <img width="1643" height="924" alt="Zrzut ekranu (15)" src="https://github.com/user-attachments/assets/5b37d8d2-8f89-4ea7-9b74-6687250ce67c" />
-><img width="1641" height="923" alt="Zrzut ekranu (16)" src="https://github.com/user-attachments/assets/562d4b17-5059-42e2-b9bb-d984c0457098" />
-><img width="1653" height="930" alt="Zrzut ekranu (17)" src="https://github.com/user-attachments/assets/11414d61-0d61-4d02-bd4e-9925156bf60e" />
-><img width="1648" height="927" alt="Zrzut ekranu (18)" src="https://github.com/user-attachments/assets/8d314d26-1b57-4c00-91b7-400b7022aad2" />
-
-
-
-
-
-
-
-
----
-
-## 🌟 Future Improvements
-- [ ] Add message length as an additional feature to improve model accuracy
-- [ ] Try other machine learning models (Random Forest, Naive Bayes, etc.)
-- [ ] Create an interactive interface using Streamlit or similar
-      
-
----
-
-## 👤 Author
-**Michał Proskurnicki** – [GitHub Profile](https://github.com/michalproskurnicki)  
-*2nd-year student, Informatics and Econometrics, Poznań University of Economics*
+## 🛠️ Technologie
+* **Język:** Python
+* **Machine Learning & NLP:** Scikit-learn (LogisticRegression, TfidfVectorizer, train_test_split z opcją stratify)
+* **Analiza i Wizualizacja:** Pandas, NumPy, Matplotlib, Seaborn
+  
+## Wizualizacje
+<img width="1385" height="490" alt="Zrzut ekranu 2026-10-27 102858" src="https://github.com/user-attachments/assets/8188819c-41ed-4dac-8674-624ef2a5fd5e" />
+<img width="591" height="493" alt="Zrzut ekranu 2026-10-27 102714" src="https://github.com/user-attachments/assets/e20c62a8-147a-4150-bd83-139721ccaaff" />
+<img width="796" height="403" alt="Zrzut ekranu 2026-10-27 102703" src="https://github.com/user-attachments/assets/517a657d-ed88-4696-a7d7-99196cd2658d" />
+## Autor Michal Proskurnicki- Student 2 roku informatyki i ekonometrii na UEP.
