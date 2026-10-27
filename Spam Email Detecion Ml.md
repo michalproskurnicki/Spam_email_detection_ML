@@ -28,12 +28,12 @@ Model został przetestowany z rygorystycznym zachowaniem braku wycieku danych (p
 * **Analiza i Wizualizacja:** Pandas, NumPy, Matplotlib, Seaborn
   
 ## Wizualizacje
-<img width="1385" height="490" alt="Zrzut ekranu 2026-10-27 102858" src="https://github.com/user-attachments/assets/8188819c-41ed-4dac-8674-624ef2a5fd5e" />
 
-<img width="591" height="493" alt="Zrzut ekranu 2026-10-27 102714" src="https://github.com/user-attachments/assets/e20c62a8-147a-4150-bd83-139721ccaaff" />
+<img width="100%" alt="Top Words" src="https://github.com/user-attachments/assets/8188819c-41ed-4dac-8674-624ef2a5fd5e" />
 
-<img width="796" height="403" alt="Zrzut ekranu 2026-10-27 102703" src="https://github.com/user-attachments/assets/517a657d-ed88-4696-a7d7-99196cd2658d" />
+<img width="100%" alt="Confusion Matrix" src="https://github.com/user-attachments/assets/e20c62a8-147a-4150-bd83-139721ccaaff" />
 
+<img width="100%" alt="Average Length" src="https://github.com/user-attachments/assets/517a657d-ed88-4696-a7d7-99196cd2658d" />
 
 
 
